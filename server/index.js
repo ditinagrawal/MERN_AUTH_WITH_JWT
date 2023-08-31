@@ -26,6 +26,10 @@ const User = require('./db/userSchema.js')
 
 // routes
 
+app.use('/', (req,res) => {
+    res.send("Hello From Backend")
+})
+
 app.post('/register', async (req,res) => {
     try {
         const {email,username,password} = req.body
