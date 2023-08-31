@@ -24,7 +24,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const resp = await axios.post("http://localhost:3000/login", {...value})
+            const resp = await axios.post("https://mern-auth-with-jwt-server.vercel.app/login", {...value})
             const token = resp.data.token
             if(resp){
                 alert("Login Successfull")
