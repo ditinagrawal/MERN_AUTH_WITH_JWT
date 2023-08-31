@@ -12,7 +12,7 @@ const Profile = () => {
         const inp = confirm("Are u Sure?")
         if (inp) {
             try {
-                const resp = await axios.post("http://localhost:3000/delete",{username})
+                const resp = await axios.post("https://mern-auth-with-jwt-server.vercel.app/delete",{username})
                 if(resp){
                     alert("Profile Deleted")
                     localStorage.removeItem("token",token)
