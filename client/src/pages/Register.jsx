@@ -23,7 +23,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const resp = await axios.post("http://localhost:3000/register",value)
+            const resp = await axios.post("https://mern-auth-with-jwt-server.vercel.app/register",value)
             if(resp){
                 alert("Successfully Registered")
                 navigate('/login')
